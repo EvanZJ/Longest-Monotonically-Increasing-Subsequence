@@ -16,7 +16,6 @@ int main(){
                         for (auto& it : g[j]) {
                             g[i].push_back(it);
                         }
-                        break;
 					}
 					else{
 						g[i].push_back(arr[j]);
@@ -39,7 +38,7 @@ int main(){
 				}
 				else{
 					if(g[j].front() > arr[i]){
-						if(g[j].size() > g[i].size()){
+						if(g[j].size() >= g[i].size()){
                             //clear g[i], readd arr[i], add g[j] to g[i]
                             g[i].clear();
                             g[i].push_back(arr[i]);
